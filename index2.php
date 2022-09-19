@@ -401,6 +401,7 @@
                                         <option value="Bali">Bali</option>
                                     </select>                       
                         </div>
+                        
                         <button type="submit" class="text-white text-center btn btn-block" style="background-color: #93C8F0; border-radius:40px"
                     name="submit1">
                         Order
@@ -430,62 +431,9 @@
                    $hasil = mysqli_query($conn, $sql);
                    while ($produk = mysqli_fetch_array($hasil)) {
                        ?>
-                       <li class="list-group-item">
-                           <div class="row">
-                               
-                               <div class="col-lg-10">
-                                   <!-- untuk deskripsi mobil -->
-                                   <h6><?=$produk["produk"]?></h6>
-                                   <h5>Nama: <?=$produk["nama"]?></h5>
-                                   <h6>Gender: <?=$produk["gender"]?></h6>
-                                   <h6>Agama: <?=$produk["agama"]?></h6>
-                                   <h6>Penempatan: <?=$produk["penempatan"]?></h6>
-                                   <h6><img src="data:img/jpeg;base64,<?php echo base64_encode($produk["img"]);?>" alt=""></h6>
-                                   
-                               </div>
-                               <div class="col-lg-2">
-                                   <a href="form-mobil.php?id=<?=$produk["id"]?>">
-                                        <button class="btn btn-info btn-block">
-                                            Edit
-                                        </button>
-                                    </a>
-                                        <br>
-                                        <div>
-                                        <a href="delete-mobil.php?id=<?=$produk["id"]?>"
-                                        onclick="return confirm('Apakah Anda yakin?')">
-                                        </div>
-                                        <button class="btn btn-danger btn-block">
-                                            Hapus
-                                        </button>
-                                        
-                                    </a>
-                                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#<?php echo "modal-".$produk["id"];?>">
-                                        Detail
-                                    </button>
-                                   
-                               </div>
-                           </div>
-
-                           <!-- pop up -->
-                           <div class="modal centered-modal fade" id="<?php echo "modal-".$produk["id"];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <?php echo $produk["nama"];?>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-info">Save changes</button>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                           <!-- end pop up -->
-                       </li>
+      
+    
+                       
                        <?php
                    }
                    ?>
