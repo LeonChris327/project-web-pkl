@@ -45,7 +45,7 @@
                            <div class="row">
                                <div class="col-lg-4">
                                    <!-- untuk gambar -->
-                                   <img src="data:img/jpeg;base64,<?php echo base64_encode($produk["img"]);?>" width="300" height="300" alt="">
+                                   <img src="data:img/jpeg;base64,<?php echo base64_encode($produk["img"]);?>" width="270" height="270" alt="">
                                </div>
                                <div class="col-lg-6">
                                    <!-- untuk deskripsi mobil -->
@@ -71,9 +71,9 @@
                                 <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#<?php echo "modal-".$produk["id"];?>">
                                     Detail
                                 </button>
-
+                                   
                                 <!-- pop up -->
-                                <div class="modal centered-modal fade" id="<?php echo "modal-".$produk["id"];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                       <div class="modal centered-modal fade" id="<?php echo "modal-".$produk["id"];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                     <div class="modal-header">
@@ -91,9 +91,13 @@
                                 </div>
                                 </div>
                            <!-- end pop up -->
-                                   
+
                                </div>
+                               
                            </div>
+
+
+                           
                        </li>
                        <?php
                    }

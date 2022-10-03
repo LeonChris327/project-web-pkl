@@ -1506,8 +1506,9 @@ ul.pricing:hover {
 }
 	
 .team-box img {
-	padding-bottom:15px;
-	margin-bottom:30px;
+	padding-bottom: 0;
+    margin-bottom: 1px;
+	
 	}
 	
 .team-box {
@@ -1527,7 +1528,7 @@ ul.pricing:hover {
 .team-box p {
 	margin-top: -15px !important;
 	font-weight: 500;
-	font-size: 12px;
+	font-size: 14px;
 	text-transform: uppercase;
 	
 }
@@ -2447,7 +2448,7 @@ span.commenthr {
 }
 
 .reply:hover {
-	color: # 93c8f0;
+	color: #93c8f0;
 }
 
 

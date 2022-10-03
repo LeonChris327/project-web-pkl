@@ -13,7 +13,6 @@
     <!-- end Google Font -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"> -->
     <!-- owl carousel SLIDER -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <!-- end awesome icons -->
@@ -94,7 +93,8 @@
                                     <i class="fa fa-laptop fa-4x pull-left"></i>
                                     <div class="media-body">							
                                         <h2>Garansi</h2>
-                                        <p>Setiap tenaga kerja yang kami tawarkan kami memberikan garansi penukaran tenaga kerja bila tidak sesuai. </p>
+                                        <p>Setiap tenaga kerja yang kami tawarkan kami memberikan garansi berupa penukaran tenaga kerja apabila tidak sesuai keinginan klien. </p>
+                                        <br>
                                     </div>
                                 </div>						
                             </div>
@@ -316,36 +316,31 @@
                               <div class="accordion-inner">
                               Kami menyediakan fasilitas video call melalui whatapps atau zoom untuk interview.
                               </div>
+                                </div> 
+                            </div>
                               <div class="accordion-group">
                             <div class="accordion-heading">
-                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
                                 <em class="fa fa-plus icon-fixed-width"></em>Penggantian atau garansi 
                               </a>
                             </div>
-                            <div id="collapseFive" class="accordion-body collapse">
+                            <div id="collapseSix" class="accordion-body collapse">
                               <div class="accordion-inner">
                               Kami memberikan garansi penggantian tenaga kerja sebanyak 2x selama jangka waktu 1 bulan
-                              </div>
+                              </div></div></div>
+                              
+
                               <div class="accordion-group">
                             <div class="accordion-heading">
-                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-                                <em class="fa fa-plus icon-fixed-width"></em>Cek kesehatan & Karantina (by Request) 
-                              </a>
-                            </div>
-                            <div id="collapseFive" class="accordion-body collapse">
-                              <div class="accordion-inner">
-                              Kami memberikan jasa cek kesehatan dengan lab yang terpercaya dan karantina (untuk masa covid-19).
-                              </div>
-                              <div class="accordion-group">
-                            <div class="accordion-heading">
-                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight">
                                 <em class="fa fa-plus icon-fixed-width"></em>Layanan customer service
                               </a>
                             </div>
-                            <div id="collapseFive" class="accordion-body collapse">
+                            <div id="collapseEight" class="accordion-body collapse">
                               <div class="accordion-inner">
                               Apabila anda mengalami kesulitan maka team customer service kami siap untuk membantu anda
-                              </div>
+                              </div></div></div>
+                              
                             </div>
                           </div> 
                         </div><!-- end accordion -->
@@ -364,12 +359,14 @@
             <div data-scroll-reveal="enter from the bottom after 0.3s" class="title text-center">
                 <h2>Order</h2>
                 <p>Perawat Terbaik Ada Disini</p>
+                <p>Harap Isi Semua Kolom Dibawah</p>
                 <hr>
 
-                <form method="GET">
+                <form action="search.php" method="GET">
                         <div class="form-group">
                             <label>Perawat</label>
-                                    <select name="search" class="form-control mb-2" style="border-radius:40px">
+                                    <select name="produk" class="form-control mb-2" style="border-radius:40px">
+                                        <option value="">Perawat</option>
                                         <option value="ART">ART</option>
                                         <option value="Nanny">Nanny</option>
                                         <option value="Perawat Lansia">Perawat Lansia</option>
@@ -378,7 +375,8 @@
 
                         <div class="form-group">
                             <label>Jenis Kelamin</label>
-                                    <select name="search" class="form-control mb-2" style="border-radius:40px">
+                                    <select name="gender" class="form-control mb-2" style="border-radius:40px">
+                                        <option value="">Jenis Kelamin</option>
                                         <option value="Pria">pria</option>
                                         <option value="Wanita">wanita</option>
                                     </select>                            
@@ -386,7 +384,7 @@
 
                         <div class="form-group">
                             <label>Durasi</label>
-                                    <select name="search" class="form-control mb-2" style="border-radius:40px">
+                                    <select name="durasi" class="form-control mb-2" style="border-radius:40px">
                                         <option value="sebulan">1 Bulan</option>
                                         <option value="2_Bulan">2 Bulan</option>
                                     </select>                         
@@ -394,101 +392,39 @@
 
                         <div class="form-group">   
                             <label>Lokasi Pasien</label>
-                                    <select name="search" class="form-control mb-2" style="border-radius:40px">
-                                        <option value="Jawa Timur">Jawa Timur</option>
-                                        <option value="Jawa Barat">Jawa Barat</option>
-                                        <option value="Jawa Tengah">Jawa Tengah</option>
-                                        <option value="Bali">Bali</option>
+                                    <select name="lokasi" placeholder="" class="form-control mb-2" style="border-radius:40px">
+                                        <option value="">Lokasi Pasien</option>
+                                        <option value="Malang">Malang</option>
+                                        <option value="Surabaya">Surabaya</option>
+                                        <option value="Banyuwangi">Banyuwangi</option>
+                                        <option value="Jember">Jember</option>
+                                        <option value="Lumajang">Lumajang</option>
+                                        <option value="Probolinggo">Probolinggo</option>
+                                        <option value="Sidoarjo">Sidoarjo</option>
+                                        <option value="Madiun">Madiun</option>
+                                        <option value="Ngawi">Ngawi</option>
+                                        <option value="Bojonegoro">Bojonegoro</option>
                                     </select>                       
                         </div>
+                        
                         <button type="submit" class="text-white text-center btn btn-block" style="background-color: #93C8F0; border-radius:40px"
                     name="submit1">
-                        Order
+                        Search
                     </button>
                 </form>        
                      
                     
             </div> <!--end reveal-->
+
+            
+           
+                       
             
 
                   
 
     <ul class="list-group">
-                   <?php
-                   include "connection.php";
-                   if(isset($_GET["search"])){
-                       $cari = $_GET["search"];
-                       $sql = "select * from home 
-                       where produk like '%$cari%' 
-                       or gender like '%$cari%'
-                       or penempatan like '%$cari%'";
-                   }else{
-                       $sql = "select * from home";
-                   }
-
-                   # eksekusi SQL
-                   $hasil = mysqli_query($conn, $sql);
-                   while ($produk = mysqli_fetch_array($hasil)) {
-                       ?>
-                       <li class="list-group-item">
-                           <div class="row">
-                               
-                               <div class="col-lg-10">
-                                   <!-- untuk deskripsi mobil -->
-                                   <h6><?=$produk["produk"]?></h6>
-                                   <h5>Nama: <?=$produk["nama"]?></h5>
-                                   <h6>Gender: <?=$produk["gender"]?></h6>
-                                   <h6>Agama: <?=$produk["agama"]?></h6>
-                                   <h6>Penempatan: <?=$produk["penempatan"]?></h6>
-                                   <h6><img src="data:img/jpeg;base64,<?php echo base64_encode($produk["img"]);?>" alt=""></h6>
-                                   
-                               </div>
-                               <div class="col-lg-2">
-                                   <a href="form-mobil.php?id=<?=$produk["id"]?>">
-                                        <button class="btn btn-info btn-block">
-                                            Edit
-                                        </button>
-                                    </a>
-                                        <br>
-                                        <div>
-                                        <a href="delete-mobil.php?id=<?=$produk["id"]?>"
-                                        onclick="return confirm('Apakah Anda yakin?')">
-                                        </div>
-                                        <button class="btn btn-danger btn-block">
-                                            Hapus
-                                        </button>
-                                        
-                                    </a>
-                                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#<?php echo "modal-".$produk["id"];?>">
-                                        Detail
-                                    </button>
-                                   
-                               </div>
-                           </div>
-
-                           <!-- pop up -->
-                           <div class="modal centered-modal fade" id="<?php echo "modal-".$produk["id"];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <?php echo $produk["nama"];?>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-info">Save changes</button>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                           <!-- end pop up -->
-                       </li>
-                       <?php
-                   }
-                   ?>
+                  
 
             
           </div>
@@ -733,5 +669,7 @@
         })(jQuery);	
     </script>
     
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script></body> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+</body>
 </html>

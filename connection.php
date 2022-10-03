@@ -6,8 +6,10 @@ $dbname = "bossnanny";
 
 $conn = mysqli_connect("localhost","root","","bossnanny");
 
-if ($conn->connect_error) {
-    die("Connection failed: "
-        . $conn->connect_error);
-}
+if ($conn -> connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+    exit();
+  }
+
+
 ?>
